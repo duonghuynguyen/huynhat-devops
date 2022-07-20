@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Web development" />
+        <meta name="keywords"    content="Registration Form" />
+        <meta name="author"      content="Tran Don Minh Nhat" />
+        <meta name="viewport" 	 content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <title>Bruno Pizzeria - Order</title>
+
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css"/>
+		<link rel="stylesheet" href="css/order.css" type="text/css"/>
+		<link rel="stylesheet" href="fonts/beyond_the_mountains-webfont.css" type="text/css"/>
+        <script type="text/javascript" src="js/script_main.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/order.js"></script>
+    </head>
+
+<body>
+	<nav>
+	<div class="flex-container">
+		<div class="container"><li><a href="index.html"><b>HOME</b></a></li></div>
+	<div class="container"><li><a href="registration.html"><b>REGISTER</b></a></li></div>
+	<div class="container"><li><a class="current" href="order.html"><b>ORDER</b></a></li></div>  
+		<div class="container"><li><a href="feature.html"><b>FEATURE</b></a></li></div>
+</div>
+				</nav>
+
+	<main>
+		
+		<div class="hero-image1">
+			<img class="cover" src="images/menu5.2.jpg" width="100%" alt="menu5.2">
+  <div class="hero-text">
+    <h1 class="brand">Let's order!!</h1>
+    <p class="intro">...and enjoy your pizza</p>
+  </div>
+		</div>
+		
+	<section class="wall2">
+<div class="row">
+  <div class="col-75">
+    <div class="containerRes">
+      <form id="orderpage" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+		  <h3>Pickup or Delivery?</h3>
+
+                        <input type="radio" name="delivery_type" id="delivery_type_pickup" value="Pickup" onclick="javascript:order('delivery_type', '#delivery-form');">
+                        <label class="button" for="delivery_type_pickup">Pickup</label>
+
+                        <input type="radio" name="delivery_type" id="delivery_type_delivery" value="Delivery" onclick="javascript:order('delivery_type', '#delivery-form');">
+                        <label class="button" for="delivery_type_delivery">Delivery</label>
+      
+        <div class="row">
+
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fullname">Full Name</label>
+            <input id="fullname" type="text" name="fullname" placeholder="John M. Wick">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="example@example.com">
+			<label for="bnumber">Phone Number</label>
+            <input type="text" id="bnumber" name="bnumber" placeholder="(+84) 000000000">
+            <label for="billing_address">Address</label>
+            <input id="billing_address" type="text" name="billing_address" placeholder="000 X. 00th Street">
+			<label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="Vietnam">
+
+            <div class="row">
+              <div class="col-50">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="Hanoi">
+              </div>
+              <div class="col-50">
+                <label for="zip_code">Zip Code</label>
+                <input type="text" id="zip_code" name="zip_code" placeholder="100001">
+              </div>
+            </div>
+          </div>
+			
+			<div class="col-50" id="delivery-for">
+			<h3>Delivery Address</h3>
+				<label for="receivername">Receiver's Name</label>
+				<input type="text" id="receivername" name="receivername" placeholder="John Nathan Wick">
+				<label for="delivery_email">Email</label>
+           		<input type="text" id="delivery_email" name="delivery_email" placeholder="example@example.com">
+				<label for="pnumber">Phone Number</label>
+            	<input type="text" id="pnumber" name="pnumber" placeholder="(+84) 000000000">
+				<label for="delivery_address">Address</label>
+				<input id="delivery_address" type="text" name="delivery_address" placeholder="000 X. 00th Street"/>
+				<label for="delivery_country">Country</label>
+				<input type="text" id="delivery_country" name="delivery_country" placeholder="Vietnam">
+				            <div class="row">
+              <div class="col-50">
+            <label for="delivery_city">City</label>
+            <input type="text" id="delivery_city" name="delivery_city" placeholder="Hanoi">
+              </div>
+              <div class="col-50">
+                <label for="delivery_zip_code">Zip Code</label>
+                <input type="text" id="delivery_zip_code" name="delivery_zip_code" placeholder="100001">
+              </div>
+            </div>
+				
+			</div>
+
+          
+        <label>
+          <p><input type="checkbox" name="sameadr" id="sameadr" onclick="FillBilling(this.form)"> Shipping address same as billing</p>
+        </label>
+			
+       
+		  </div>
+		  <h3>Pay on Pickup or Online?</h3>
+
+                        <input type="radio" name="payment_type" id="payment_type_pickup" value="Pickup" onclick="javascript:order('payment_type', '#payment-form');">
+                        <label class="button" for="payment_type_pickup">Pickup</label>
+
+                        <input type="radio" name="payment_type" id="payment_type_online" value="Online" onclick="javascript:order('payment_type', '#payment-form');">
+                        <label class="button" for="payment_type_online">Online</label>
+		  <div class="col-50">
+			  <div id="payment-for">
+            <h3>Payment</h3>
+            <label for="cards">Accepted Cards</label>
+            <div class="icon-container">
+				<input type="radio" name="card_type_visa" id="card_type_visa" value="card_name">
+                        <i for="card_name_visa" class="visa"><img class="icon" src="images/visa-icon.png" alt="visa_icon"></i>
+				<input type="radio" name="card_type_mastercard" id="card_type_mastercard" value="card_name">
+                        <i for="card_name_mastercard" class="mastercard"><img class="icon" src="images/MasterCard_icon.png" alt="mastercard_icon"></i>
+				<input type="radio" name="card_type_amex" id="card_type_amex" value="card_name">
+                        <i for="card_name_amex" class="amex"><img class="icon" src="images/American_Express.png" alt="amex_icon"></i>
+             
+            </div>
+            <label for="cardname">Name on Card</label>
+            <input type="text" id="cardname" name="cardname" placeholder="John Nathan Wick">
+            <label for="cardnumber">Credit card number</label>
+            <input type="text" id="cardnumber" name="cardnumber" placeholder="0000 0000 0000 0000">
+            <label for="expmonth">Exp Month</label>
+			  <div class="col-50">
+		<select id="expmonth" name="expmonth">
+		  <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+		  <option value="may">May</option>
+			<option value="june">June</option>
+			<option value="july">July</option>
+			<option value="august ">August </option>
+          <option value="september">September</option>
+		  <option value="october">October</option>
+			<option value="november">November</option>
+			<option value="december">December</option>
+        </select>
+			  
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2020">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="000">
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+		  <div class="col-50">
+		  <input type="submit" value="Continue to checkout" class="button">
+		  </div>
+
+      </form>
+    </div>
+  </div> 
+	<aside>
+  <div class="col-25">
+    <div class="containerRes">
+      <h4>Your pizza <span class="price" style="color:black"></span></h4>
+      <p><a href="#">Order 1</a> <span class="price">$0</span></p>
+      <p><a href="#">Order 2</a> <span class="price">$0</span></p>
+      <p><a href="#">Order 3</a> <span class="price">$0</span></p>
+      <p><a href="#">Order 4</a> <span class="price">$0</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$0</b></span></p>
+    </div>
+  </div>
+		</aside>
+</div>
+	</section>
+		
+	<footer>
+
+				 <p>@NoCopyright 2019</p>
+			<br/>
+
+		</footer>
+	</main>
+</body>
+</html>

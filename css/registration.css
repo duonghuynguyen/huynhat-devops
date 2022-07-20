@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+/* Style the form to a fixed width so the form looks the same
+even if the browser window is resize */
+form {
+  width: 50em;
+}
+
+/* Style the labels and input by aligning all input fields */
+label {
+  float: left;
+  margin-right: 1em;
+  text-align: right;
+  width: 9em;
+}
+
+input {
+  width: 25%;
+}
+
+/* Style text input to have spacing between input fields */
+.textinput {
+  margin: 10px;
+}
+
+/* Style radio button input to a single line
+note that declarations are inherited */
+.radioinput fieldset {
+  border: none;
+}
+
+.radioinput legend {
+  float: left;
+  margin-right: 1em;
+  text-align: right;
+  width: 9em; /* Not 10em as it is inside a fieldset */
+}
+
+.radioinput input  {
+  width: 2em;/* reset inherited value from 10em to 2em */
+}
+
+.radioinput label  {
+  float: none; /* clears the inherited float left */
+  text-align: left; /* reset inherited alignment to left */
+}
+
+/* Style  button input
+note that declarations are inherited */
+.buttoninput {
+  text-align: right;
+}
+
+.buttoninput input {
+  width: auto;
+}
+.register {
+  display: block;
+  flex: 1;
+  margin: 10px auto 0;
+  max-width: 90%;
+  padding-bottom: 10px;
+  width: 900px;
+}
+.row {
+  margin:  9 -1.5em;
+}
+.row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.button {
+  background-color: #FF2E31;
+  border: 1px solid;
+  display: inline-block;
+  margin: 8px 5px 8px 5px;
+  padding: 20px 10px;
+  text-align: center;
+  width: 30%;
+  border-color: green;
+  border-width: 2px;
+	color: white;
+}
+
+input[type="radio"]:checked + label,
+.button:hover {
+  background-color: yellow;
+  color: black;
+}
+input[type="radio"]:checked + label,
+.button:active {
+  background-color: #2AC831;
+  color: #fff;
+}
+button {
+  color: #252525;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 1.6em 0;
+}
+legend {
+	font-size: 28px;
+	text-align: center;
+	font-style: italic;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+textarea {
+	width: 500px;
+	height: 100px;
+}
+fieldset {
+	
+	font-size: 18px;
+	border-style: solid;
+	border-color: red;
+	border-width: 4px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"
+}
+input[type=text]:focus, textarea:focus, input[type=radio]:focus,
+input[type=password]:focus, input[type=email]:focus {
+	background-color: #FFF99D;
+	
+}
+.wall1 {
+	background-image: url("wallregis.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: auto;
+	
+}
+
+
+/*resposive*/
+* {
+  box-sizing: border-box;
+}
+.info {
+	height:120px;
+}
+
+input[type=text], select, textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label .labelRes {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+.containerRes {
+  border-radius: 5px;
+  padding: 20px;
+  background: rgba(237,255,0,0.5);
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.rowRes:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 720px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

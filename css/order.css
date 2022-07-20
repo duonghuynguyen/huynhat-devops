@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+.wall2 {
+	background-image: url("wallorder.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+/* Style text input to have spacing between input fields */
+.textinput {
+  margin: 10px;
+}
+.hidden {
+	visibility: hidden;
+}
+.button {
+  background-color: #FF2E31;
+  border: 1px solid;
+  display: inline-block;
+  margin: 10px 5px 10px 5px;
+  padding: 20px 10px;
+  text-align: center;
+  width: 35%;
+  border-color: green;
+  border-width: 2px;
+	color: white;
+	cursor: pointer;
+	
+}
+
+input[type="radio"]:checked + label,
+.button:hover {
+  background-color: yellow;
+  color: black;
+}
+input[type="radio"]:checked + label,
+.button:active {
+  background-color: #2AC831;
+  color: #fff;
+}
+input[type="radio"] {
+  display: none;
+  margin-bottom: 0px;
+  width: 0px;
+}
+button {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 1.6em 0;
+}
+legend {
+	font-size: 28px;
+	text-align: center;
+	font-style: italic;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+input[type=text]:focus, textarea:focus, input[type=radio]:focus,
+input[type=password]:focus, input[type=email]:focus {
+	background-color: #FFF99D;
+	
+}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  flex: 25%;
+}
+
+.col-50 {
+  flex: 50%;
+}
+
+.col-75 {
+  flex: 70%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.containerRes {
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  background: rgba(237,255,0,0.5);
+  margin: 10px;
+}
+
+input[type=text], select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+.icon {
+	width: 11%;
+	margin: 0px 8px;
+}
+hr {
+  border: 1px solid green;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+radio {
+	list-style-type: none;
+}
+
+/* Responsive layout - make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 720px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}

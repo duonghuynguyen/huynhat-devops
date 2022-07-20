@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Web development" />
+        <meta name="keywords"    content="Registration Form" />
+        <meta name="author"      content="Tran Don Minh Nhat" />
+        <meta name="viewport" 	 content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <title>Registration</title>
+
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css"/>
+		<link rel="stylesheet" href="fonts/beyond_the_mountains-webfont.css" type="text/css"/>
+		<link rel="stylesheet" href="css/registration.css" type="text/css"/>
+        <script type="text/javascript" src="js/script_main.js"></script>
+		<script type="text/javascript" src="js/registration.js"></script>
+    </head>
+
+<body>
+	<nav>
+	<div class="flex-container">
+		<div class="container"><li><a href="index.html"><b>HOME</b></a></li></div>
+	<div class="container"><li><a class="current" href="registration.html"><b>REGISTER</b></a></li></div>
+	<div class="container"><li><a href="order.html"><b>ORDER</b></a></li></div>  
+		<div class="container"><li><a href="feature.html"><b>FEATURE</b></a></li></div>
+</div>
+				</nav>
+
+	<main>
+		
+		<div class="hero-image2">
+			<img class="cover" src="images/menu4.2.jpg" width="100%" alt="menu4.2">
+  <div class="hero-text">
+    <h1 class="brand">Registration</h1>
+    <p class="intro">Provide us your info and become a member!</p>
+  </div>
+		</div>	
+	<section class="wall1">
+		 <section class="register">
+
+				<div class="containerRes">
+					
+  <form id="registrationpage" method="post" action="http://mercury.swin.edu.au/it000000/cos10005/formtest.php">
+	  <fieldset>
+		  <legend>&nbsp;&nbsp;&nbsp;Sign up Information&nbsp;&nbsp;&nbsp;</legend>
+    <div class="rowRes">
+      <div class="col-25">
+        <label class="labelRes" for="username">Username</label>
+      </div>
+      <div class="col-75">
+        <input id="username" type="text" name="username" placeholder="Donwell141"/>
+      </div>
+    </div>
+		  <div class="rowRes">
+      <div class="col-25">
+        <label  class="labelRes" for="password1">Password</label>
+      </div>
+      <div class="col-75">
+        <input id="password1" type="text" name="password" placeholder="******"/>
+      </div>
+    </div>
+		  <div class="rowRes">
+      <div class="col-25">
+        <label  class="labelRes" for="password2">Retype password</label>
+      </div>
+      <div class="col-75">
+        <input id="password2" type="text" name="password" placeholder="******"/>
+      </div>
+    </div>
+    <div class="rowRes">
+      <div class="col-25">
+        <label  class="labelRes" for="email">Email Address</label>
+      </div>
+      <div class="col-75">
+        <input id="email" type="text" name="email" placeholder="example@yahoo.com"/>
+      </div>
+    </div>
+		  <br/>
+
+		  </fieldset>
+	  <br/>
+					
+	  		<fieldset>
+	<legend>&nbsp;&nbsp;&nbsp;Personal Information&nbsp;&nbsp;&nbsp;</legend>
+			<div class="rowRes">
+      <div class="col-25">
+        <label class="labelRes" for="full_name">Full Name</label>
+      </div>
+      <div class="col-75">
+        <input id="full_name" type="text" name="full_name" placeholder="John Wick"/>
+      </div>
+    </div>
+				<div class="rowRes">
+      <div class="col-25">
+        <label class="labelRes" for="gender">Gender</label>
+      </div>
+      <div class="col-75">
+		  <input id="genm" type="radio" name="gender" value="Male">Male
+		  <input id="genf" type="radio" name="gender" value="Female">Female
+		  
+      </div>
+    </div>
+				<div class="rowRes">
+      <div class="col-25">
+        <label  class="labelRes" for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+		  <option value="vietnam">Vietnam</option>
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+		  <option value="japan">Japan</option>
+			<option value="russia">Russia</option>
+			<option value="china">China</option>
+        </select>
+      </div>
+    </div>
+				    <div class="rowRes">
+      <div class="col-25">
+        <label  class="labelRes" for="info">Extra information <br/> (Optional)</label>
+      </div>
+      <div class="col-75">
+        <textarea class="info" name="info" placeholder="About your personality"></textarea>
+      </div>
+    </div>
+				
+				<div class="rowRes">
+      <div class="col-25">
+        <label class="labelRes" for="favorite_pizza">Favorite Pizzas:</label>
+      </div>
+      <div class="col-75">
+        <p class="favorite">
+						<input type="checkbox" name="favorite_pizza" value="The Texan">The Texan<br/>
+                        <input type="checkbox" name="favorite_pizza" value="Spicy Veg">Spicy Veg<br/>
+                        <input type="checkbox" name="favorite_pizza" value="Meat Feast">Meat Feast<br/>
+                        <input type="checkbox" name="favorite_pizza" value="Pepperoni">Pepperoni<br/>
+                        <input type="checkbox" name="favorite_pizza" value="Paesano">Paesano<br/>
+                        <input type="checkbox" name="favorite_pizza" value="Hot Shot">Hot Shot<br/>
+		  </p>
+      </div>
+    </div>
+				
+			</fieldset>
+	  				<div>
+						<button class="button" type="reset" value="Reset">Reset</button>
+						<button class="button" type="submit" value="Submit Order">Register</button>
+						
+                    </div>
+  </form>
+
+</div>
+        </section>
+	</section>
+		<footer>
+
+				 <p>@NoCopyright 2019</p>
+			<br/>
+
+		</footer>
+	</main>
+</body>
+</html>
